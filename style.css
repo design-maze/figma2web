@@ -1,0 +1,336 @@
+    body {
+        background-color: #f5f5f5;
+        background-color: #fff;
+        color: #333366;
+        color: #2e4e9c;
+        padding: 0;
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #cards {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        max-width: 1440px;
+        max-height: 385px;
+        margin-top: 110px;
+        margin-top: 0;
+        position: absolute;
+        top: 129px;
+        top: 90px;
+        left: 0;
+        background-color: transparent;
+        text-align: right;
+        z-index: 2;
+    }
+
+    .card_item {
+        height: 385px;
+        width: 274px;
+        margin-left: 13px;
+        margin-right: 13px;
+        display: inline-block;
+        vertical-align: top;
+        z-index: 1;
+        background-color: #ffffff;
+        text-align: left;
+        border: 0;
+
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .card_item:hover {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    .card_banners img {
+        height: 154px;
+        width: 274px;
+    }
+
+    .card_section_top p {
+        width: 232px;
+        height: 96px;
+        margin: 0 auto;
+        font-size: 21px;
+        margin-top: 14px;
+        line-height: 1.3;
+        color: #1C3F94;
+
+    }
+
+    .card_section_bottom p {
+        width: 223px;
+        height: 88px;
+        margin: 0 auto;
+        margin-left: 20px;
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        color: #0C233F;
+        font-family: 'Minion Pro', serif;
+    }
+
+    #left_arrow {
+        width: 36px;
+        height: 36px;
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 1;
+        margin-top: 66px;
+        background-color: transparent;
+        margin-right: -7px;
+        cursor: pointer;
+
+    }
+
+    #right_arrow {
+        width: 36px;
+        height: 36px;
+        margin-left: 0;
+        margin-right: 80px;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 1;
+        background-color: transparent;
+        margin-top: 66px;
+        text-align: left;
+        margin-left: -7px;
+        cursor: pointer;
+
+    }
+
+    #left_arrow img {
+        width: 36px;
+        height: 36px;
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 1;
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+
+
+    }
+
+    #right_arrow img {
+        width: 36px;
+        height: 36px;
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 1;
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+    }
+
+    #left_arrow img:hover,
+    #right_arrow img:hover {
+        border: 1px solid #333;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+    }
+
+
+    #background {
+        width: 100%;
+        max-width: 1440px;
+        height: 160px;
+        background-color: #333366;
+        background-color: #666666;
+        background-color: #63666b;
+        position: absolute;
+        top: 0;
+        margin-top: 110px;
+        z-index: -1;
+        text-align: left;
+    }
+
+    #background_headings {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 120px;
+        max-width: 230px;
+    }
+
+    #section_heading {
+        font-size: 38px;
+        color: #ffffff;
+        margin-top: 36px;
+        margin-bottom: 0;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+
+    #section_subheading {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.9px;
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+
+
+    .card_item {
+        display: none;
+    }
+
+    .active {
+        display: inline-block;
+    }
+
+    #background_mobile {
+        background-color: #63666b;
+        background-color: #fff;
+        display: none;
+        margin-bottom: 50px;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #background_headings_mobile {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+        max-width: 230px;
+        color: #eee;
+        padding-bottom: 20px;
+
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        background: #fff;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #63666b;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #333;
+    }
+
+
+
+
+    .circle {
+        width: 90px;
+        height: 90px;
+
+        border-radius: 9999px;
+        border: 1px #1C3F94 solid;
+
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: inline-block;
+        vertical-align: middle;
+
+
+    }
+
+    .circle img {
+        width: 30px;
+        height: 30px;
+        border-radius: 9999px;
+        border: 1px transparent solid;
+    }
+
+    .txt {
+        color: #0C233F;
+        font-size: 18px;
+        font-family: Georgia;
+        font-weight: 400;
+        line-height: 24.30px;
+        word-wrap: break-word;
+    }
+
+    #wealth_advisors {
+        background-image: url('wealth_icon.webp');
+        background-repeat: no-repeat;
+        background-size: 45px 50px;
+        background-position: center;
+    }
+
+    #groups {
+        background-image: url('groups_icon.webp');
+        background-repeat: no-repeat;
+        background-size: 54px 30px;
+        background-position: center;
+    }
+
+    #diversity_icon {
+        background-image: url('diversity_icon.webp');
+        background-repeat: no-repeat;
+        background-size: 90px 90px;
+        background-position: center;
+    }
+
+    #elementsab {
+        display: block;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 850px) {
+        #elementsab {
+            display: none;
+        }
+
+        #mobile {
+            display: block;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+
+
+        }
+
+        #right_arrow {
+            margin-right: auto;
+        }
+
+        #right_arrow {
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+
+        #left_arrow {
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        #cards {
+            text-align: center;
+            max-width: 99%;
+        }
+
+
+    }
+
+    .card_banners img {
+        object-fit: cover;
+    }
