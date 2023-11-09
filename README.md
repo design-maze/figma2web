@@ -8,3 +8,4 @@ All files required for the webpage to work are contained within this single fold
 Number of HTML files: 1 (index.html)
 Number of Images: 8 (diversity_icon.png, groups_icon.png,wealth_icon.png,left_arrow.png,right_arrow.png,one.jpg,two.jpg,three.png)
 
+LIVE PREVIEW can be seen at https://data.designmaze.net/repo/ (will remain there for a limited time though)
