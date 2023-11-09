@@ -471,6 +471,7 @@
             var card_image = document.createElement("img");
             card_image.classList.add("card_image");
             card_image.src = slide_data[i].image;
+            card_image.setAttribute("alt", slide_data[i].title);
 
             card_section_top.appendChild(card_title);
             card_section_bottom.appendChild(card_description);
