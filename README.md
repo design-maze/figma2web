@@ -6,7 +6,7 @@ For local changes the file index.html can be edited from any directory as it doe
 All files required for the webpage to work are contained within this single folder.
 
 Number of HTML files: 1 (index.html)
-Number of Images: 8 (diversity_icon.png, groups_icon.png,wealth_icon.png,left_arrow.png,right_arrow.png,one.jpg,two.jpg,three.png)
+Number of Images: 8 (diversity_icon.webp, groups_icon.webp, wealth_icon.webp, left_arrow.webp, right_arrow.webp, one.webp, two.webp, three.webp)
 
 LIVE PREVIEW can be seen at https://data.designmaze.net/repo/ (will remain there for a limited time though)
 
