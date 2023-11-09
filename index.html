@@ -222,22 +222,18 @@
         ::-webkit-scrollbar {
             width: 10px;
             background: #fff;
-            /* make scrollbar transparent */
         }
 
         ::-webkit-scrollbar-thumb {
             background: #63666b;
-            /* make scrollbar transparent */
         }
 
         ::-webkit-scrollbar-track {
             background: #fff;
-            /* make scrollbar transparent */
         }
 
         ::-webkit-scrollbar-thumb:hover {
             background: #333;
-            /* make scrollbar transparent */
         }
 
 
@@ -324,20 +320,20 @@
             }
 
             #right_arrow {
-                position:absolute;
-                right:0;
-                top:50%;
+                position: absolute;
+                right: 0;
+                top: 50%;
             }
 
             #left_arrow {
-                position:absolute;
-                left:0;
-                top:50%;
+                position: absolute;
+                left: 0;
+                top: 50%;
             }
 
             #cards {
                 text-align: center;
-                max-width:99%;
+                max-width: 99%;
             }
 
 
@@ -402,10 +398,7 @@
 
         <br>
         <br>
-        <!--div id="background_headings_mobile">
-                <div id="section_heading_mobile"><h2>Latest News</h2></div>
-                <div id="section_subheading_mobile">Lorem ipsum dolor sit amet consectetur elit.</div>
-            </div-->
+
     </div>
 
 
@@ -620,7 +613,7 @@
 
         <div>
             <div class="circle">
-                <img src="wealth_icon.png"
+                <img src="wealth_icon.png" alt="Wealth Advisors Icon"
                     style="width: 45px; height: 50px; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; display: inline-block; vertical-align: middle;">
             </div>
             <heading>For Wealth Advisors & Professionals</heading>
@@ -632,7 +625,7 @@
 
         <div>
             <div class="circle">
-                <img src="groups_icon.png"
+                <img src="groups_icon.png" alt="Groups Icon"
                     style="width: 54px; height: 30px; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; display: inline-block; vertical-align: middle;">
             </div>
             <heading>For Law Students</heading>
@@ -643,7 +636,7 @@
         </div>
 
         <div>
-            <img src="diversity_icon.png"
+            <img src="diversity_icon.png" alt="Diversity Icon"
                 style="width: 90px; height: 90px; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; display: inline-block; vertical-align: middle;">
             <heading>Diversity Resources</heading>
             <p
@@ -741,45 +734,45 @@
         </div>
     </div>
 
-<div id="modal" style="display:none">
+    <div id="modal" style="display:none">
 
-</div>
+    </div>
 
-<script>
-    var modal_items = document.getElementById("slides").getElementsByClassName("card_item");
-    var modal = document.getElementById("modal");
-    for(var i=0;i<modal_items.length;i++){
-        modal_items[i].addEventListener("click", function () {
+    <script>
+        var modal_items = document.getElementById("slides").getElementsByClassName("card_item");
+        var modal = document.getElementById("modal");
+        for (var i = 0; i < modal_items.length; i++) {
+            modal_items[i].addEventListener("click", function () {
 
-            if(modal.style.display!="block"){
-                
+                if (modal.style.display != "block") {
 
-            modal.style.display = "block";
-            modal.style.position = "fixed";
-            modal.style.zIndex = "100";
-            modal.style.paddingTop = "100px";
-            modal.style.left = "0";
-            modal.style.top = "0";
-            modal.style.width = "100%";
-            modal.style.height = "100%";
-            modal.style.overflow = "auto";
-            modal.style.textAlign = "center";
-            modal.style.color = "#ffffff";
 
-            modal.style.backgroundColor = "rgba(0,0,0,0.8)";
-            modal.innerHTML =  "<div style='width:300px;max-width:80vw;padding:10px;text-align:left;margin:auto;background-color:#fff;overflow:auto;padding-bottom:20px'>"+this.innerHTML+"</div>";
-            modal.addEventListener("click", function () {
-                modal.style.display = "none";
+                    modal.style.display = "block";
+                    modal.style.position = "fixed";
+                    modal.style.zIndex = "100";
+                    modal.style.paddingTop = "100px";
+                    modal.style.left = "0";
+                    modal.style.top = "0";
+                    modal.style.width = "100%";
+                    modal.style.height = "100%";
+                    modal.style.overflow = "auto";
+                    modal.style.textAlign = "center";
+                    modal.style.color = "#ffffff";
+
+                    modal.style.backgroundColor = "rgba(0,0,0,0.8)";
+                    modal.innerHTML = "<div style='width:300px;max-width:80vw;padding:10px;text-align:left;margin:auto;background-color:#fff;overflow:auto;padding-bottom:20px'>" + this.innerHTML + "</div>";
+                    modal.addEventListener("click", function () {
+                        modal.style.display = "none";
+                    });
+                }
             });
-            } 
-    });
-    
-    }
 
-</script>
-<br>
-<br>
-<br>
+        }
+
+    </script>
+    <br>
+    <br>
+    <br>
 </body>
 
 </html>
