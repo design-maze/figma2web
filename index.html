@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Conversion Task</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            background-color: #fff;
+            color: #333366;
+            color: #2e4e9c;
+            padding: 0;
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #cards {
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            max-width: 1440px;
+            max-height: 385px;
+            margin-top: 110px;
+            margin-top: 0;
+            position: absolute;
+            top: 129px;
+            top: 90px;
+            left: 0;
+            background-color: transparent;
+            text-align: right;
+            z-index: 2;
+        }
+
+        .card_item {
+            height: 385px;
+            width: 274px;
+            margin-left: 13px;
+            margin-right: 13px;
+            display: inline-block;
+            vertical-align: top;
+            z-index: 1;
+            background-color: #ffffff;
+            text-align: left;
+            border: 0;
+
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .card_item:hover {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .card_banners img {
+            height: 154px;
+            width: 274px;
+        }
+
+        .card_section_top p {
+            width: 232px;
+            height: 96px;
+            margin: 0 auto;
+            font-size: 21px;
+            margin-top: 14px;
+            line-height: 1.3;
+            color: #1C3F94;
+
+        }
+
+        .card_section_bottom p {
+            width: 223px;
+            height: 88px;
+            margin: 0 auto;
+            margin-left: 20px;
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+            color: #0C233F;
+            font-family: 'Minion Pro', serif;
+        }
+
+        #left_arrow {
+            width: 36px;
+            height: 36px;
+            margin-left: 0;
+            margin-right: 0;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 1;
+            margin-top: 66px;
+            background-color: transparent;
+            margin-right: -7px;
+            cursor: pointer;
+
+        }
+
+        #right_arrow {
+            width: 36px;
+            height: 36px;
+            margin-left: 0;
+            margin-right: 80px;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 1;
+            background-color: transparent;
+            margin-top: 66px;
+            text-align: left;
+            margin-left: -7px;
+            cursor: pointer;
+
+        }
+
+        #left_arrow img {
+            width: 36px;
+            height: 36px;
+            margin-left: 0;
+            margin-right: 0;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 1;
+            background-color: #ffffff;
+            border: 1px solid #e5e5e5;
+
+
+        }
+
+        #right_arrow img {
+            width: 36px;
+            height: 36px;
+            margin-left: 0;
+            margin-right: 0;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 1;
+            background-color: #ffffff;
+            border: 1px solid #e5e5e5;
+        }
+
+        #left_arrow img:hover,
+        #right_arrow img:hover {
+            border: 1px solid #333;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+        }
+
+
+        #background {
+            width: 100%;
+            max-width: 1440px;
+            height: 160px;
+            background-color: #333366;
+            background-color: #666666;
+            background-color: #63666b;
+            position: absolute;
+            top: 0;
+            margin-top: 110px;
+            z-index: -1;
+            text-align: left;
+        }
+
+        #background_headings {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 120px;
+            max-width: 230px;
+        }
+
+        #section_heading {
+            font-size: 38px;
+            color: #ffffff;
+            margin-top: 36px;
+            margin-bottom: 0;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        #section_subheading {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.9px;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 0;
+
+        }
+
+
+        .card_item {
+            display: none;
+        }
+
+        .active {
+            display: inline-block;
+        }
+
+        #background_mobile {
+            background-color: #63666b;
+            background-color: #fff;
+            display: none;
+            margin-bottom: 50px;
+            vertical-align: middle;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #background_headings_mobile {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+            max-width: 230px;
+            color: #eee;
+            padding-bottom: 20px;
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #fff;
+            /* make scrollbar transparent */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #63666b;
+            /* make scrollbar transparent */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fff;
+            /* make scrollbar transparent */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333;
+            /* make scrollbar transparent */
+        }
+
+
+
+
+        .circle {
+            width: 90px;
+            height: 90px;
+
+            border-radius: 9999px;
+            border: 1px #1C3F94 solid;
+
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+            vertical-align: middle;
+
+
+        }
+
+        .circle img {
+            width: 30px;
+            height: 30px;
+            border-radius: 9999px;
+            border: 1px transparent solid;
+        }
+
+        .txt {
+            color: #0C233F;
+            font-size: 18px;
+            font-family: Georgia;
+            font-weight: 400;
+            line-height: 24.30px;
+            word-wrap: break-word;
+        }
+
+        #wealth_advisors {
+            background-image: url('wealth_icon.png');
+            background-repeat: no-repeat;
+            background-size: 45px 50px;
+            background-position: center;
+        }
+
+        #groups {
+            background-image: url('groups_icon.png');
+            background-repeat: no-repeat;
+            background-size: 54px 30px;
+            background-position: center;
+        }
+
+        #diversity_icon {
+            background-image: url('diversity_icon.png');
+            background-repeat: no-repeat;
+            background-size: 90px 90px;
+            background-position: center;
+        }
+
+        #elementsab {
+            display: block;
+        }
+
+        #mobile {
+            display: none;
+        }
+
+        @media screen and (max-width: 850px) {
+            #elementsab {
+                display: none;
+            }
+
+            #mobile {
+                display: block;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+
+
+            }
+
+            #right_arrow {
+                margin-right: auto;
+            }
+
+            #right_arrow {
+                position:absolute;
+                right:0;
+                top:50%;
+            }
+
+            #left_arrow {
+                position:absolute;
+                left:0;
+                top:50%;
+            }
+
+            #cards {
+                text-align: center;
+                max-width:99%;
+            }
+
+
+        }
+
+        .card_banners img {
+            object-fit: cover;
+        }
+    </style>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <script>
+        var slide_data = [{
+            "id": "1",
+            "title": "1 - Lorem ipsum dolor sit amet consectetuer. Sed vulputate eget",
+            "description": "1 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat cupiditate, accusamus numquam id aliquam molestiae.",
+            "image": "one.jpg"
+        }, {
+            "id": "2",
+            "title": "2 - Lorem ipsum dolor sit amet consectetuer. Sed vulputate eget",
+            "description": "2 -Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat cupiditate, accusamus numquam id aliquam molestiae.",
+            "image": "two.jpg"
+        }, {
+            "id": "3",
+            "title": "3 - Lorem ipsum dolor sit amet consectetuer. Sed vulputate eget",
+            "description": "3 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat cupiditate, accusamus numquam id aliquam molestiae.",
+            "image": "three.png"
+        }, {
+            "id": "4",
+            "title": "4 -Lorem ipsum dolor sit amet consectetuer. Sed vulputate eget",
+            "description": "4 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat cupiditate, accusamus numquam id aliquam molestiae.",
+            "image": "one.jpg"
+        }, {
+            "id": "5",
+            "title": "5 - Lorem ipsum dolor sit amet consectetuer. Sed vulputate eget",
+            "description": "5 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat cupiditate, accusamus numquam id aliquam molestiae.",
+            "image": "two.jpg"
+        }, {
+            "id": "6",
+            "title": "6 - Lorem ipsum dolor sit amet consectetuer. Sed vulputate eget",
+            "description": "6 - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat cupiditate, accusamus numquam id aliquam molestiae.",
+            "image": "three.png"
+        }
+        ];
+    </script>
+
+    <div id="background_mobile" style="width:90%;margin-left: auto; margin-right:auto;max-width:90%; ">
+
+        <div
+            style="margin-top: 25px; color: #0C233F; font-size: 26px; font-family: Raleway; font-weight: 400; word-wrap: break-word;max-width:90%;">
+            Latest News
+        </div>
+        <div
+            style="width: 434px; left: 0px; color: #0C233F; font-size: 18px; font-family: Georgia; font-weight: 400; line-height: 24.30px; word-wrap: break-word;margin-top: 1px;max-width:90%;">
+            Lorem ipsum dolor sit amet consectetur elit.</div>
+
+        <br>
+        <br>
+        <!--div id="background_headings_mobile">
+                <div id="section_heading_mobile"><h2>Latest News</h2></div>
+                <div id="section_subheading_mobile">Lorem ipsum dolor sit amet consectetur elit.</div>
+            </div-->
+    </div>
+
+
+
+
+
+
+    <div id="cards">
+
+
+        <div id="left_arrow"><img src="left_arrow.png" onclick="showPreviousSlide()" alt="Left Arrow Navigation Icon">
+        </div>
+
+        <span id="slides"></span>
+
+
+        <div id="right_arrow"><img src="right_arrow.png" onclick="showNextSlide()" alt="Right Arrow Navigation Icon">
+        </div>
+        <div id="background">
+            <div id="background_headings">
+                <div id="section_heading">Latest News</div>
+                <div id="section_subheading">Lorem ipsum dolor sit amet consectetur elit.</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+    <script>
+
+
+
+
+        var slide_index = 1;
+
+        var cardscontainer = document.getElementById("cards");
+        var cardscontainerinside = document.getElementById("slides");
+
+        var count_total_slides = slide_data.length;
+
+        // create element for each slide and append to cardscontainer
+
+
+        for (var i = 0; i < count_total_slides; i++) {
+
+            console.log(slide_data[i].id);
+            var card = document.createElement("div");
+            card.classList.add("card_item");
+            card.setAttribute("id", slide_data[i].id);
+
+            var card_banners = document.createElement("div");
+            card_banners.classList.add("card_banners");
+
+            var card_section_top = document.createElement("div");
+            card_section_top.classList.add("card_section_top");
+
+            var card_section_bottom = document.createElement("div");
+            card_section_bottom.classList.add("card_section_bottom");
+
+            var card_title = document.createElement("p");
+            card_title.classList.add("card_title");
+            card_title.innerHTML = slide_data[i].title;
+
+            var card_description = document.createElement("p");
+            card_description.classList.add("card_description");
+            card_description.innerHTML = slide_data[i].description;
+
+            var card_image = document.createElement("img");
+            card_image.classList.add("card_image");
+            card_image.src = slide_data[i].image;
+
+            card_section_top.appendChild(card_title);
+            card_section_bottom.appendChild(card_description);
+            card_banners.appendChild(card_image);
+            card.appendChild(card_banners);
+            card.appendChild(card_section_top);
+            card.appendChild(card_section_bottom);
+
+            cardscontainerinside.appendChild(card);
+        }
+
+
+
+    </script>
+    <script>
+
+        let currentSlide = 0;
+        const cardItems = document.querySelectorAll('.card_item');
+
+        function showNextSlide() {
+
+
+            if (window.innerWidth < 1100) {
+                if (currentSlide < cardItems.length - 1) {
+
+                    cardItems[currentSlide].classList.remove('active');
+                    currentSlide++;
+                    cardItems[currentSlide].classList.add('active');
+
+                }
+            } else {
+                if (currentSlide < cardItems.length - 3) {
+
+                    cardItems[currentSlide].classList.remove('active');
+                    currentSlide++;
+                    cardItems[currentSlide + 2].classList.add('active');
+
+                }
+            }
+        }
+
+        function showPreviousSlide() {
+
+
+            if (window.innerWidth < 1100) {
+                if (currentSlide > 0) {
+
+                    cardItems[currentSlide].classList.remove('active');
+                    currentSlide--;
+                    cardItems[currentSlide].classList.add('active');
+                }
+            } else {
+
+
+                if (currentSlide > 0) {
+
+                    cardItems[currentSlide + 2].classList.remove('active');
+                    currentSlide--;
+                    cardItems[currentSlide].classList.add('active');
+                }
+            }
+        }
+
+        function updateSlidesDisplay() {
+            cardItems.forEach((item, index) => {
+                if (index >= currentSlide && index < currentSlide + visibleCards) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        function showSlide(index) {
+            currentSlide = index;
+            updateSlidesDisplay();
+        }
+
+
+        window.addEventListener('load', () => {
+            visibleCards = window.innerWidth < 1100 ? 1 : 3;
+            showSlide(0); // Reset to the first slide
+
+
+
+            if (window.innerWidth < 1100) {
+                document.getElementById("background").style.display = "none";
+                document.getElementById("background_mobile").style.display = "block";
+                document.getElementById("cards").style.marginTop = "50px";
+            } else {
+                document.getElementById("background").style.display = "block";
+                document.getElementById("background_mobile").style.display = "none";
+
+            }
+
+        });
+
+
+        window.addEventListener('resize', () => {
+            visibleCards = window.innerWidth < 1100 ? 1 : 3;
+            showSlide(0); // Reset to the first slide
+
+
+
+            if (window.innerWidth < 1100) {
+                document.getElementById("background").style.display = "none";
+                document.getElementById("background_mobile").style.display = "block";
+                document.getElementById("cards").style.marginTop = "50px";
+            } else {
+                document.getElementById("background").style.display = "block";
+                document.getElementById("background_mobile").style.display = "none";
+
+            }
+
+        });
+
+
+
+        // adjust slides on page load
+        let visibleCards = window.innerWidth < 1100 ? 1 : 3;
+        showSlide(0);
+
+
+
+
+    </script>
+
+
+    <div id="mobile" style="width:90vw;max-width:90vw;">
+
+        <div
+            style="left: 0px; margin-top: 555px; color: #0C233F; font-size: 26px; font-family: Raleway; font-weight: 400; word-wrap: break-word;max-width:90%;">
+            Expanding Your Knowledge</div>
+        <div
+            style="width: 434px; left: 0px; color: #0C233F; font-size: 18px; font-family: Georgia; font-weight: 400; line-height: 24.30px; word-wrap: break-word;margin-top: 1px;max-width:90%;">
+            Lorem ipsum dolor sit amet consectetur urna dolor</div>
+
+        <br>
+        <br>
+
+        <div>
+            <div class="circle">
+                <img src="wealth_icon.png"
+                    style="width: 45px; height: 50px; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; display: inline-block; vertical-align: middle;">
+            </div>
+            <heading>For Wealth Advisors & Professionals</heading>
+            <p
+                style="text-align:center;color: #0C233F; font-size: 16px; font-family: Georgia; font-weight: 400; line-height: 22.40px; word-wrap: break-word;max-width:90%;">
+                Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales viverra.
+            </p>
+        </div>
+
+        <div>
+            <div class="circle">
+                <img src="groups_icon.png"
+                    style="width: 54px; height: 30px; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; display: inline-block; vertical-align: middle;">
+            </div>
+            <heading>For Law Students</heading>
+            <p
+                style="text-align:center;color: #0C233F; font-size: 16px; font-family: Georgia; font-weight: 400; line-height: 22.40px; word-wrap: break-word;max-width:90%;">
+                Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales viverra.
+            </p>
+        </div>
+
+        <div>
+            <img src="diversity_icon.png"
+                style="width: 90px; height: 90px; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; display: inline-block; vertical-align: middle;">
+            <heading>Diversity Resources</heading>
+            <p
+                style="text-align:center;color: #0C233F; font-size: 16px; font-family: Georgia; font-weight: 400; line-height: 22.40px; word-wrap: break-word;max-width:90%;">
+                Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales viverra.
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <div style="top:600px;position:absolute;width:99%;text-align:left;height:500px;left:0px;max-width:1440px"
+        id="elementsab">
+
+
+        <div style="display:inline-block;top:10px;position:relative;width:700px;;text-align:left;height:500px;max-width:46%;left:120px;"
+            id="element2a">
+            <div style="width: 608px; height: 68px; left: 0px; top: 158px; left:120px;max-width:30vw">
+                <div
+                    style="left: 0px; margin-top: 150px; color: #0C233F; font-size: 36px; font-family: Raleway; font-weight: 400; word-wrap: break-word">
+                    Expanding Your Knowledge</div>
+                <div
+                    style="width: 434px; left: 0px; top: 4px; position: relative; color: #0C233F; font-size: 18px; font-family: Georgia; font-weight: 400; line-height: 24.30px; word-wrap: break-word;margin-top: 1px;max-width:30vw">
+                    Lorem ipsum dolor sit amet consectetur urna dolor</div>
+            </div>
+
+
+        </div>
+
+
+
+        <div style="display:inline-block;top:10px;position:absolute;width:48%;text-align:left;left:50vw;"
+            id="element2b">
+
+            <div id="element2_right">
+
+                <div
+                    style="width: 304px; height: 0px; left: 15px; top: 349px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1px #1C3F94 solid">
+                </div>
+                <div
+                    style="width: 61px; height: 0px; left: 14px; top: 45px; position: absolute; border: 1px #1C3F94 solid">
+                </div>
+                <div
+                    style="width: 61px; height: 0px; left: 14px; top: 197px; position: absolute; border: 1px #1C3F94 solid">
+                </div>
+                <div
+                    style="width: 87px; height: 0px; left: -15px; top: 197px; position: absolute; border: 1px #1C3F94 solid; ">
+                </div>
+                <div
+                    style="width: 61px; height: 0px; left: 14px; top: 349px; position: absolute; border: 1px #1C3F94 solid">
+                </div>
+                <div style="width: 44.44px; height: 50.59px; left: 98px; top: 14px; position: absolute">
+                </div>
+                <div style="width: 53.68px; height: 29.95px; left: 93px; top: 182px; position: absolute">
+
+                </div>
+
+
+                <div style="width: 380px; left: 181px; top: 5px; position: absolute;color:#1C3F94" class="txt">
+                    For Wealth Advisors &amp; Professionals</div>
+                <div style="width: 380px; left: 181px; top: 153px; position: absolute;color:#1C3F94" class="txt">
+                    For Law Students</div>
+                <div style="width: 380px; left: 181px; top: 309px; position: absolute;color:#1C3F94" class="txt">
+                    Diversity Resources</div>
+                <div
+                    style="width: 494px; left: 180px; top: 32px; position: absolute; color: #0C233F; font-size: 16px; font-family: Georgia; font-weight: 400; line-height: 22.40px; word-wrap: break-word;max-width:50vw;">
+                    Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales
+                    viverra.</div>
+                <div
+                    style="width: 494px; left: 180px; top: 180px; position: absolute; color: #0C233F; font-size: 16px; font-family: Georgia; font-weight: 400; line-height: 22.40px; word-wrap: break-word;max-width:50vw;">
+                    Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales
+                    viverra.</div>
+                <div
+                    style="width: 494px; left: 180px; top: 336px; position: absolute; color: #0C233F; font-size: 16px; font-family: Georgia; font-weight: 400; line-height: 22.40px; word-wrap: break-word;max-width:50vw;">
+                    Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales
+                    viverra.</div>
+                <div style="width: 90px; height: 242px; left: 75px; top: 0px; position: absolute">
+                    <div style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px #1C3F94 solid"
+                        id="wealth_advisors">
+                    </div>
+                    <div style="width: 90px; height: 90px; left: 0px; top: 152px; position: absolute; border-radius: 9999px; border: 1px #1C3F94 solid"
+                        id="groups">
+                    </div>
+                </div>
+                <div style="width: 90px; height: 90px; left: 75px; top: 304px; position: absolute">
+                    <div style="width: 90px; height: 90px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px transparent solid"
+                        id="diversity_icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="modal" style="display:none">
+
+</div>
+
+<script>
+    var modal_items = document.getElementById("slides").getElementsByClassName("card_item");
+    var modal = document.getElementById("modal");
+    for(var i=0;i<modal_items.length;i++){
+        modal_items[i].addEventListener("click", function () {
+
+            if(modal.style.display!="block"){
+                
+
+            modal.style.display = "block";
+            modal.style.position = "fixed";
+            modal.style.zIndex = "100";
+            modal.style.paddingTop = "100px";
+            modal.style.left = "0";
+            modal.style.top = "0";
+            modal.style.width = "100%";
+            modal.style.height = "100%";
+            modal.style.overflow = "auto";
+            modal.style.textAlign = "center";
+            modal.style.color = "#ffffff";
+
+            modal.style.backgroundColor = "rgba(0,0,0,0.8)";
+            modal.innerHTML =  "<div style='width:300px;max-width:80vw;padding:10px;text-align:left;margin:auto;background-color:#fff;overflow:auto;padding-bottom:20px'>"+this.innerHTML+"</div>";
+            modal.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+            } 
+    });
+    
+    }
+
+</script>
+<br>
+<br>
+<br>
+</body>
+
+</html>
